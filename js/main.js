@@ -435,6 +435,21 @@ $(document).ready(function() {
   //     pulseIn();
   //     pulseGames();
   //   });
+  $(".app").on("click", function() {
+    console.log("app click");
+
+    // $("#bottom").hide();
+    $("#sidebarApp").show();
+    $("#galery").css("left", "0%");
+    $("#favorites").css("left", "100%");
+    $("#settings").css("left", "200%");
+    $("#wallpaper").addClass("current");
+    $("#favorite").removeClass("current");
+    $("#options").removeClass("current");
+    //  append_images();
+  });
+
+
   $(".background").on("click", function() {
     console.log("background click");
 
