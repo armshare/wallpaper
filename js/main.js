@@ -302,6 +302,7 @@ $(document).ready(function() {
   }
   $(".close").on("click", function() {
     $("#sidebar").hide();
+    $("#sidebarApp").hide();
     // $("#bottom").show();
   });
   //   $(".fa-chrome").on("click", function() {
