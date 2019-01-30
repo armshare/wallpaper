@@ -32,12 +32,11 @@
             <a id="lnk_topsites">Backgrounds</a>
         </div>
 
-        <div class="themes" >
+        <div class="themes" data-toggle="modal" data-target="#myModal" >
             <a id="lnk_tool">Themes</a>
         </div>
         <div class="app">
             <a id="lnk_tool">Apps</a>
-            
         </div>
       
         <a id="click-Rate" href="#">Most Visited</a>
@@ -110,48 +109,152 @@
         <span class="close"></span>
     </div>
                 <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apps </a> -->
-                <ul class="">
-                    <li class="reclink" onclick="go('https://facebook.com')">
+                <ul class="list-group">
+                    <li class="list-group-item" onclick="go('https://facebook.com')">
                 <button class="linkbtn"><img class="linkimg" src="img/facebook.png"></button>
                 <span class="linklabel">Facebook</span>
                 </li>
-                <li role="separator" class="divider"></li>
-                <li class="reclink" onclick="go('https://youtube.com')">
+                
+                <li class="list-group-item" onclick="go('https://youtube.com')">
                 <button class="linkbtn"><img class="linkimg" src="img/youtube.png"></button>
                 <span class="linklabel">Youtube</span>
                 </li>
-                <li role="separator" class="divider"></li>
-                <li class="reclink" onclick="go('https://www.instagram.com/')">
+                
+                <li class="list-group-item" onclick="go('https://www.instagram.com/')">
                 <button class="linkbtn"><img class="linkimg" src="img/instagram.png"></button>
                 <span class="linklabel">Instagram</span>
                 </li>
-                <li role="separator" class="divider"></li>
-                <li class="reclink" onclick="go('https://mail.google.com')">
+                
+                <li class="list-group-item" onclick="go('https://mail.google.com')">
                 <button class="linkbtn"><img class="linkimg" src="img/gmail_bak.png"></button>
                 <span class="linklabel">Gmail</span>
                 </li>
-                <li role="separator" class="divider"></li>
-                <li class="reclink" onclick="go('http://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_ff3=1&amp;pub=5575157943&amp;toolid=10001&amp;campid=5338387540&amp;customid=&amp;ipn=psmain&amp;icep_vectorid=229466&amp;kwid=902099&amp;mtid=824&amp;kw=lg')">
+                
+                <li class="list-group-item" onclick="go('http://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_ff3=1&amp;pub=5575157943&amp;toolid=10001&amp;campid=5338387540&amp;customid=&amp;ipn=psmain&amp;icep_vectorid=229466&amp;kwid=902099&amp;mtid=824&amp;kw=lg')">
                 <button class="linkbtn"><img class="linkimg" src="img/ebay.png"></button>
                     <span class="linklabel">eBay</span>
                 </li>
-                <li role="separator" class="divider"></li>
-                <li class="reclink" onclick="go('https://amazon.com')">
+                
+                <li class="list-group-item" onclick="go('https://amazon.com')">
                 <button class="linkbtn"><img class="linkimg" src="img/amazon.png"></button>
                 <span class="linklabel">Amazon</span>
                 </li>
-                <li role="separator" class="divider"></li>
-                <li class="reclink" onclick="go('http://s.click.aliexpress.com/e/vbamiyJYj')">
+                
+                <li class="list-group-item" onclick="go('http://s.click.aliexpress.com/e/vbamiyJYj')">
                 <button class="linkbtn"><img class="linkimg" src="img/aliexpress.png"></button>
                 <span class="linklabel">Aliexpress</span>
                 </li>
-                <li role="separator" class="divider"></li>
-                <li class="reclink" onclick="go('http://www.booking.com/resorts/index.html?aid=1169103')">
+                
+                <li class="list-group-item" onclick="go('http://www.booking.com/resorts/index.html?aid=1169103')">
                 <button class="linkbtn"><img class="linkimg" src="img/booking.png"></button>
                 <span class="linklabel">Booking</span>
                 </li>
         </ul>
         
+</div>
+
+<div id="support_menu" style="display:none;">
+    <div id="head">
+        <span class="close"></span>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item" >
+            <a class="lnk_update_0_1_8" href="http://freeaddon.com/update-0-1-8/" target="_blank">Update 0.1.8</a>
+    </li>
+    
+    <li class="list-group-item" >
+        <a class="lnk_faq" href="http://freeaddon.com/faq/" target="_blank">FAQ / How-to</a>
+    </li>
+    
+    <li class="list-group-item" >
+        <a class="click-Feedback" href="#">Feedback</a>
+    </li>
+    
+    <li class="list-group-item" >
+        <a class="click-Donate" href="#">Donate</a>
+    </li>
+    
+    <li class="list-group-item" >
+            <a class="click-Fanpage" href="#">Fan Page</a>
+    </li>
+    
+    <li class="list-group-item" >
+            <a class="lnk_eula" href="http://freeaddon.com/eula/" target="_blank">EULA</a>
+    </li>
+    
+    <li class="list-group-item" >
+            <a class="lnk_privacy" href="http://freeaddon.com/privacy/" target="_blank">Privacy Policy</a>
+    </li>
+    
+    <li class="list-group-item">
+            <a class="uninstallSelf">Uninstall</a>
+    </li>
+</ul>
+
+    <!-- <div><a class="lnk_update_0_1_8" href="http://freeaddon.com/update-0-1-8/" target="_blank">Update 0.1.8</a></div>
+    <hr>
+    <div><a class="lnk_faq" href="http://freeaddon.com/faq/" target="_blank">FAQ / How-to</a></div>
+    <hr>
+    <div><a class="click-Feedback" href="#">Feedback</a></div>
+    <hr>
+    <div><a class="click-Donate" href="#">Donate</a></div>
+    <hr>
+    <div><a class="click-Fanpage" href="#">Fan Page</a></div>
+    <hr>
+    <div><a class="lnk_eula" href="http://freeaddon.com/eula/" target="_blank">EULA</a></div>
+    <div><a class="lnk_privacy" href="http://freeaddon.com/privacy/" target="_blank">Privacy Policy</a></div>
+    <hr>
+    <div><a class="uninstallSelf">Uninstall</a></div> -->
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+          <h4 class="modal-title" id="myModalLabel">Please Select Theme</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <a href="#"><img class="img-responsive img-thumbnail" src="/default/image29.jpg"/></a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#"><img class="img-responsive img-thumbnail" src="/default/image28.jpg"/></a>
+                </div> 
+                <div class="col-md-4">
+                    <a href="#"><img class="img-responsive img-thumbnail" src="/default/image28.jpg"/></a>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <a href="#"><img class="img-responsive img-thumbnail" src="/default/image28.jpg"/></a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#"><img class="img-responsive img-thumbnail" src="/default/image29.jpg"/></a>
+                </div> 
+                <div class="col-md-4">
+                    <a href="#"><img class="img-responsive img-thumbnail" src="/default/image28.jpg"/></a>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <a href="#"><img class="img-responsive img-thumbnail" src="/default/image28.jpg"/></a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#"><img class="img-responsive img-thumbnail" src="/default/image28.jpg"/></a>
+                </div> 
+                <div class="col-md-4">
+                    <a href="#"><img class="img-responsive img-thumbnail" src="/default/image29.jpg"/></a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
 </div>
 
 <div class="widget">
@@ -168,28 +271,14 @@
 	<div id="bottom">
 
         <div class="support">
-			<a id="lnk_support">Share</a>
-			<a id="lnk_support">Rate</a>
-            <a id="lnk_support">Support</a>
-            <div class="nav_menu" id="support_menu" style="max-height: 577px; display: none;">
-                <div><a class="lnk_update_0_1_8" href="http://freeaddon.com/update-0-1-8/" target="_blank">Update 0.1.8</a></div>
-                <hr>
-                <div><a class="lnk_faq" href="http://freeaddon.com/faq/" target="_blank">FAQ / How-to</a></div>
-                <hr>
-                <div><a class="click-Feedback" href="#">Feedback</a></div>
-                <hr>
-                <div><a class="click-Donate" href="#">Donate</a></div>
-                <hr>
-                <div><a class="click-Fanpage" href="#">Fan Page</a></div>
-                <hr>
-                <div><a class="lnk_eula" href="http://freeaddon.com/eula/" target="_blank">EULA</a></div>
-                <div><a class="lnk_privacy" href="http://freeaddon.com/privacy/" target="_blank">Privacy Policy</a></div>
-                <hr>
-                <div><a class="uninstallSelf">Uninstall</a></div>
-            </div>
+			<a id="lnk_support_Share">Share</a>
+			<a id="lnk_support_Rate">Rate</a>
+            <a id="lnk_support" data-toggle="popover" data-placement="top">Support</a>
         </div>
     </div>
     </footer>
+   
+  
 </body>
 </html>
 <script type="text/javascript" src="/js/analytics.js"></script>

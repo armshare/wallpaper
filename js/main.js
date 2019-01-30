@@ -4,16 +4,16 @@ function go(url) {
 }
 $(document).ready(function() {
   var storage = $.localStorage;
-  var theme = window.location.pathname.split("/")[1];
-  console.log("theme : ", theme);
+  var theme = (window.location.pathname.split("/")[1] === "index.html") ? "" :window.location.pathname.split("/")[1] ;
+  // console.log("theme : ", theme);
 
   var changed_theme = storage.get("changed_theme");
   var original_theme = theme;
-  console.log("original_theme : ", original_theme);
+  // console.log("original_theme : ", original_theme);
 
   if (!original_theme) {
     original_theme = "default";
-    console.log("original_theme is set : ", original_theme);
+    // console.log("original_theme is set : ", original_theme);
   }
   if (changed_theme) {
     theme = changed_theme;
@@ -33,7 +33,7 @@ $(document).ready(function() {
   };
   ga("create", "UA-104538446-3", "auto");
   ga("send", "pageview");
-  console.log("Build: 6.1.4");
+   console.log("Build: 6.1.4");
   //   $("#searchInput").googleSuggest();
   //   $('[data-toggle="tooltip"]').tooltip();
   $("#searchbox").focusout(function() {
@@ -72,7 +72,7 @@ $(document).ready(function() {
     ][this.getMonth()];
   };
   if (storage.isEmpty(theme)) {
-    console.log("No theme need set new theme");
+    // console.log("No theme need set new theme");
 
     var data = {
       default: {
@@ -84,7 +84,7 @@ $(document).ready(function() {
         install_date : Date.now()
       }
     };
-    console.log(theme, data);
+    // console.log(theme, data);
     storage.set("default", data);
 
     // $.ajax({
@@ -102,8 +102,8 @@ $(document).ready(function() {
     // });
   }
   var config = storage.get(theme);
-  console.log("config :", config);
-  console.log("storage.isEmpty(userid) :", storage.isEmpty("userid"));
+  // console.log("config :", config);
+  // console.log("storage.isEmpty(userid) :", storage.isEmpty("userid"));
 
     if (storage.isEmpty("userid")) {
       var userid = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
@@ -115,7 +115,7 @@ $(document).ready(function() {
         }
       );
       storage.set("userid", userid);
-      console.log("storage.set(userid) :", storage.get("userid"));
+      // console.log("storage.set(userid) :", storage.get("userid"));
     }
   //   if (config[theme]["alert"] || changed_theme) {
   //     load_onesignal();
@@ -162,7 +162,7 @@ $(document).ready(function() {
               config[theme]["images"][num] +
               '")'
           );
-          console.log('random : ', num)
+          // console.log('random : ', num)
           if (config[theme]["type"] == "video") {
             //append_video(config[theme]["images"][num]);
           }
@@ -180,7 +180,7 @@ $(document).ready(function() {
                 config[theme]["images"][num] +
                 '")'
             );
-            console.log('random fav: ', num)
+            // console.log('random fav: ', num)
           if (config[theme]["type"] == "video") {
           //  append_video(config[theme]["favorites"][num]);
           }
@@ -207,13 +207,13 @@ $(document).ready(function() {
       .pop()
       .split(";")
       .shift();
-      console.log('install_cookie :  ', install_cookie , !install_cookie || install_cookie == "undefined")
+      // console.log('install_cookie :  ', install_cookie , !install_cookie || install_cookie == "undefined")
     if (!install_cookie || install_cookie == "undefined") {
       var original_config = storage.get(original_theme);
-      console.log('original_config 1 :  ',  original_config )
-      console.log('original_config 2:  ',  original_config[original_theme] )
-      console.log('original_config 3 :  ',  original_config[original_theme]["install_date"])
-      console.log('original_config :  ',  original_config && original_config[original_theme] && original_config[original_theme]["install_date"])
+      // console.log('original_config 1 :  ',  original_config )
+      // console.log('original_config 2:  ',  original_config[original_theme] )
+      // console.log('original_config 3 :  ',  original_config[original_theme]["install_date"])
+      // console.log('original_config :  ',  original_config && original_config[original_theme] && original_config[original_theme]["install_date"])
       if (
         original_config &&
         original_config[original_theme] &&
@@ -436,8 +436,52 @@ $(document).ready(function() {
   //     pulseIn();
   //     pulseGames();
   //   });
+  $('#lnk_support[data-toggle="popover"]').popover({
+    container: 'body',
+        html: true,
+        content: function () {
+            var clone = `<ul class="list-group">
+            <li class="list-group-item" >
+                <a class="lnk_update_0_1_8" href="http://freeaddon.com/update-0-1-8/" target="_blank">Update 0.1.8</a>
+        </li>
+        
+        <li class="list-group-item" >
+            <a class="lnk_faq" href="http://freeaddon.com/faq/" target="_blank">FAQ / How-to</a>
+        </li>
+        
+        <li class="list-group-item" >
+            <a class="click-Feedback" href="#">Feedback</a>
+        </li>
+        
+        <li class="list-group-item" >
+            <a class="click-Donate" href="#">Donate</a>
+        </li>
+        
+        <li class="list-group-item" >
+                <a class="click-Fanpage" href="#">Fan Page</a>
+        </li>
+        
+        <li class="list-group-item" >
+                <a class="lnk_eula" href="http://freeaddon.com/eula/" target="_blank">EULA</a>
+        </li>
+        
+        <li class="list-group-item" >
+                <a class="lnk_privacy" href="http://freeaddon.com/privacy/" target="_blank">Privacy Policy</a>
+        </li>
+        
+        <li class="list-group-item">
+                <a class="uninstallSelf">Uninstall</a>
+        </li>
+    </ul>`;
+            return clone;
+        }
+    }).click(function(e) {
+        e.preventDefault();
+    
+  })
+  
   $(".app").on("click", function() {
-    console.log("app click");
+    // console.log("app click");
 
     // $("#bottom").hide();
     $("#sidebarApp").show();
@@ -452,8 +496,7 @@ $(document).ready(function() {
 
 
   $(".background").on("click", function() {
-    console.log("background click");
-
+    // console.log("background click");
     // $("#bottom").hide();
     $("#sidebar").show();
     $("#galery").css("left", "0%");
@@ -465,7 +508,7 @@ $(document).ready(function() {
      append_images();
   });
   $("#wallpaper").on("click", function() {
-    console.log("wallpaper click");
+    // console.log("wallpaper click");
 
     $("#galery").css("left", "0%");
     $("#favorites").css("left", "100%");
@@ -476,8 +519,7 @@ $(document).ready(function() {
     append_images();
   });
   $("#favorite").on("click", function() {
-    console.log("favorite click");
-
+    // console.log("favorite click");
     $("#galery").css("left", "100%");
     $("#settings").css("left", "200%");
     $("#favorites").css("left", "0%");
@@ -514,6 +556,7 @@ $(document).ready(function() {
       );
     }
   });
+
   function show_options() {
     config = storage.get(theme);
     if (config[theme]["mode"] == "random") {
@@ -538,7 +581,7 @@ $(document).ready(function() {
     }
   }
   $(".optionslst").on("click", function(event) {
-    console.log('event.target.className : ' , event.target.className)
+    // console.log('event.target.className : ' , event.target.className)
     if (event.target.className == "opt-rand") {
       $(".opt-fav").removeClass("special");
       $(".opt-selct").removeClass("special");
@@ -558,9 +601,10 @@ $(document).ready(function() {
       config[theme]["mode"] = "selected";
     }
     storage.set(theme, config);
-    console.log('config option set : ', config);
+    // console.log('config option set : ', config);
     
   });
+  
   //   $(".close-button").on("click", function() {
   //     $(".themePick").hide();
   //     $(".blur").hide();
@@ -679,7 +723,7 @@ $(document).ready(function() {
   //   }
   function append_images() {
     config = storage.get(theme);
-    console.log('append_images config ', config)
+    // console.log('append_images config ', config)
     $(".piclist").children("li").remove();
     $.each(config[theme]["images"], function(index, image) {
       var icon = "fav fa fa-star-o";
@@ -692,7 +736,7 @@ $(document).ready(function() {
 
   function append_images_fav() {
     config = storage.get(theme);
-    console.log("append img fav : ", config);
+    // console.log("append img fav : ", config);
     $(".favlist")
       .children("li")
       .remove();
@@ -729,7 +773,7 @@ $(document).ready(function() {
   }
 
   $(".piclist").on("click", ".fav", function() {
-    console.log("logo fav click", config, theme);
+    // console.log("logo fav click", config, theme);
 
     $this = $(this);
     var re = new RegExp(theme + '/(.*)"', "i");
@@ -749,7 +793,7 @@ $(document).ready(function() {
   });
 
   $(".piclist").on("click", ".imglist", function(e) {
-    //console.log('wallpaper change' , config , theme);
+    //// console.log('wallpaper change' , config , theme);
 
     if (e.target === this) {
       var re = new RegExp(theme + '/(.*)"', "i");
