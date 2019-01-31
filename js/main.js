@@ -440,7 +440,7 @@ $(document).ready(function() {
     container: 'body',
         html: true,
         content: function () {
-            var clone = `<ul class="list-group">
+            var clone = `<ul class="list-group" style="padding:0;" background-color:#eeeeeebf;>
             <li class="list-group-item" >
                 <a class="lnk_update_0_1_8" href="http://freeaddon.com/update-0-1-8/" target="_blank">Update 0.1.8</a>
         </li>
