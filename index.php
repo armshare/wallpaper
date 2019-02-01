@@ -207,32 +207,40 @@
                     <a href="#"><img class="img-responsive img-thumbnail" src="../../wallpaper/default/image29.jpg"/></a>
                 </div>
                 <div class="col-md-4">
-                    <a href="#"><img class="img-responsive img-thumbnail" src="../../wallpaper/default/image28.jpg"/></a>
+                    <a href="#"><img class="img-responsive img-thumbnail" src="
+                        /image28.jpg"/></a>
                 </div> 
                 <div class="col-md-4">
-                    <a href="#"><img class="img-responsive img-thumbnail" src="../../wallpaper/default/image28.jpg"/></a>
+                    <a href="#"><img class="img-responsive img-thumbnail" src="
+                        /image28.jpg"/></a>
                 </div>
             </div>
             <div class="row form-group">
                 <div class="col-md-4">
-                    <a href="#"><img class="img-responsive img-thumbnail" src="../../wallpaper/default/image28.jpg"/></a>
+                    <a href="#"><img class="img-responsive img-thumbnail" src="
+                        /image28.jpg"/></a>
                 </div>
                 <div class="col-md-4">
-                    <a href="#"><img class="img-responsive img-thumbnail" src="../../wallpaper/default/image29.jpg"/></a>
+                    <a href="#"><img class="img-responsive img-thumbnail" src="
+                        /image29.jpg"/></a>
                 </div> 
                 <div class="col-md-4">
-                    <a href="#"><img class="img-responsive img-thumbnail" src="../../wallpaper/default/image28.jpg"/></a>
+                    <a href="#"><img class="img-responsive img-thumbnail" src="
+                        /image28.jpg"/></a>
                 </div>
             </div>
             <div class="row form-group">
                 <div class="col-md-4">
-                    <a href="#"><img class="img-responsive img-thumbnail" src="../../wallpaper/default/image28.jpg"/></a>
+                    <a href="#"><img class="img-responsive img-thumbnail" src="
+                        /image28.jpg"/></a>
                 </div>
                 <div class="col-md-4">
-                    <a href="#"><img class="img-responsive img-thumbnail" src="../../wallpaper/default/image28.jpg"/></a>
+                    <a href="#"><img class="img-responsive img-thumbnail" src="
+                        /image28.jpg"/></a>
                 </div> 
                 <div class="col-md-4">
-                    <a href="#"><img class="img-responsive img-thumbnail" src="../../wallpaper/default/image29.jpg"/></a>
+                    <a href="#"><img class="img-responsive img-thumbnail" src="
+                        /image29.jpg"/></a>
                 </div>
             </div>
         </div>

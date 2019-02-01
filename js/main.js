@@ -155,7 +155,7 @@ $(document).ready(function() {
           $("#background-image").css(
             "backgroundImage",
             'url("' +
-            window.location.href.replace("/index.html#","") +
+            window.location.href.replace("/index.php#","") +
               "/" +
               theme +
               "/" +
@@ -173,7 +173,7 @@ $(document).ready(function() {
             $("#background-image").css(
               "backgroundImage",
               'url("' +
-              window.location.href.replace("/index.html#","") +
+              window.location.href.replace("/index.php#","") +
                 "/" +
                 theme +
                 "/" +
@@ -189,7 +189,7 @@ $(document).ready(function() {
           $("#background-image").css(
             "backgroundImage",
             'url("' +
-            window.location.href.replace("/index.html#","") +
+            window.location.href.replace("/index.php","") +
               "/" +
               theme +
               "/" +
@@ -730,7 +730,7 @@ $(document).ready(function() {
       if (jQuery.inArray(image, config[theme]["favorites"]) !== -1) {
         icon = "fav fa fa-star";
       }
-      $(".piclist").append('<li class=\"imglist\" style=\"background-image: url(\'' + window.location.href.replace("/index.html#","") + '/' + theme + '/' + image + '\');\"><div class="' + icon + '"></div></li>');
+      $(".piclist").append('<li class=\"imglist\" style=\"background-image: url(\'' + window.location.href.replace("/index.php","") + '/' + theme + '/' + image + '\');\"><div class="' + icon + '"></div></li>');
     });
   }
 
@@ -749,7 +749,7 @@ $(document).ready(function() {
       var icon = "fav fa fa-star";
       $(".favlist").append(
         '<li class="favimg" style="background-image: url(\'' +
-        window.location.href.replace("/index.html#","") +
+        window.location.href.replace("/index.php#","") +
           "/" +
           theme +
           "/" +
@@ -817,7 +817,7 @@ $(document).ready(function() {
 
       $("#background-image").css(
         "backgroundImage",
-        'url("' + window.location.href.replace("/index.html#","") + "/" + theme + "/" + m[1] + '")'
+        'url("' + window.location.href.replace("/index.php#","") + "/" + theme + "/" + m[1] + '")'
       );
 
       // if (config[theme]["type"] == "video") {
