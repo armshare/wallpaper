@@ -189,7 +189,7 @@ $(document).ready(function() {
           $("#background-image").css(
             "backgroundImage",
             'url("' +
-            window.location.href.replace("/index.html","") +
+            window.location.href.replace("/index.html#","") +
               "/" +
               theme +
               "/" +
