@@ -4,7 +4,7 @@ function go(url) {
 }
 $(document).ready(function() {
   var storage = $.localStorage;
-  var theme = (window.location.pathname.split("/")[1] === "index.html") ? "" :window.location.pathname.split("/")[1] ;
+  var theme = ( ( (window.location.pathname.split("/"))[(window.location.pathname.split("/").length)-1] === "index.html"))|| ( (window.location.pathname.split("/"))[(window.location.pathname.split("/").length)-1] === "index.php")  ? "" :  (window.location.pathname.split("/"))[(window.location.pathname.split("/").length)-1]
   // console.log("theme : ", theme);
 
   var changed_theme = storage.get("changed_theme");
@@ -154,8 +154,8 @@ $(document).ready(function() {
             Math.floor(Math.random() * config[theme]["images"].length) + 0;
           $("#background-image").css(
             "backgroundImage",
-            'url("http://' +
-              window.location.host +
+            'url("' +
+            window.location.href.replace("/index.html#","") +
               "/" +
               theme +
               "/" +
@@ -172,8 +172,8 @@ $(document).ready(function() {
             Math.floor(Math.random() * config[theme]["favorites"].length) + 0;
             $("#background-image").css(
               "backgroundImage",
-              'url("http://' +
-                window.location.host +
+              'url("' +
+              window.location.href.replace("/index.html#","") +
                 "/" +
                 theme +
                 "/" +
@@ -188,8 +188,8 @@ $(document).ready(function() {
         case "selected":
           $("#background-image").css(
             "backgroundImage",
-            'url("http://' +
-              window.location.host +
+            'url("' +
+            window.location.href.replace("/index.html","") +
               "/" +
               theme +
               "/" +
@@ -730,7 +730,7 @@ $(document).ready(function() {
       if (jQuery.inArray(image, config[theme]["favorites"]) !== -1) {
         icon = "fav fa fa-star";
       }
-      $(".piclist").append('<li class=\"imglist\" style=\"background-image: url(\'http://' + window.location.host + '/' + theme + '/' + image + '\');\"><div class="' + icon + '"></div></li>');
+      $(".piclist").append('<li class=\"imglist\" style=\"background-image: url(\'' + window.location.href.replace("/index.html#","") + '/' + theme + '/' + image + '\');\"><div class="' + icon + '"></div></li>');
     });
   }
 
@@ -748,8 +748,8 @@ $(document).ready(function() {
     $.each(config[theme]["favorites"], function(index, image) {
       var icon = "fav fa fa-star";
       $(".favlist").append(
-        '<li class="favimg" style="background-image: url(\'http://' +
-          window.location.host +
+        '<li class="favimg" style="background-image: url(\'' +
+        window.location.href.replace("/index.html#","") +
           "/" +
           theme +
           "/" +
@@ -817,7 +817,7 @@ $(document).ready(function() {
 
       $("#background-image").css(
         "backgroundImage",
-        'url("http://' + window.location.host + "/" + theme + "/" + m[1] + '")'
+        'url("' + window.location.href.replace("/index.html#","") + "/" + theme + "/" + m[1] + '")'
       );
 
       // if (config[theme]["type"] == "video") {

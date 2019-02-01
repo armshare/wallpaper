@@ -6,6 +6,9 @@ body.maincontent {
   font-weight: 400;
 }
 
+#background-image{
+  background-image: url()
+}
 #background-image {
   display: block;
   background-position: center center;
